@@ -187,7 +187,7 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
         lengths = []
         for audiopath, sid, lang, text in self.audiopaths_sid_text:
             if self.min_text_len <= len(text) and len(text) <= self.max_text_len:
-                audiopaths_sid_text_new.append([audiopath, sid, text])
+                audiopaths_sid_text_new.append([audiopath, sid, lang, text])
                 lengths.append(os.path.getsize(audiopath) // (2 * self.hop_length))
         self.audiopaths_sid_text = audiopaths_sid_text_new
         self.lengths = lengths
