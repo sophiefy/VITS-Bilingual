@@ -1,2 +1,2 @@
-# Stella Multi-lingual TTS Based on VITS
+# Stella Bilingual TTS Based on VITS
 
