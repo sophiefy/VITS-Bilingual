@@ -11,7 +11,7 @@ _japanese_marks = re.compile(r'[^A-Za-z\d\u3005\u3040-\u30ff\u4e00-\u9fff\uff11-
 
 _japanese_vowels = ['a', 'i', 'u', 'e', 'o']
 
-_contracted_sound = ['N']
+_hatsuon = ['N']
 
 _revision_jp = {
     'shi': 'xi',
@@ -112,7 +112,7 @@ def add_tone(text, low=True):
   length = len(text)
   for i, char in enumerate(text):
     new_text.append(char)
-    if char in (_japanese_vowels + _contracted_sound):
+    if char in (_japanese_vowels + _hatsuon):
       if low:
         new_text.append('1')
       else:
